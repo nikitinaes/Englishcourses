@@ -1,5 +1,6 @@
 package com.example.registration.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,15 +9,14 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.Set;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 @Entity
 public class Student {
     @Id
@@ -29,10 +29,10 @@ public class Student {
     private String phoneNumber;
     private int age;
 
-    @OneToOne(mappedBy = "student_id")
+    @OneToOne(mappedBy = "student")//было student_id
     private CourseRegistration registration;
 
-    @OneToMany(mappedBy = "student_id")
+    @OneToMany(mappedBy = "student")//было student_id
     private Set<StudentLesson> lessons;
 
 }

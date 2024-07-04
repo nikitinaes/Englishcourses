@@ -8,16 +8,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDateTime;
 //Lesson= availableSlot
 
-@Entity
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
+@Entity
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

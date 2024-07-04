@@ -1,7 +1,14 @@
 server:
-  port: 8081
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5433/postgres
-#    username: postgres
-#    password: pass
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6542/reg
+    username: reg
+    password: reg
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect

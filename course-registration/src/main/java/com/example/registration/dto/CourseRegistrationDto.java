@@ -15,7 +15,7 @@ public class CourseRegistrationDto {
     private Long id;
     private Long courseId;
     private StudentDto student;
-//    private TeacherDto teacher;
-    private Long teacherId;
+    private TeacherDto teacher;
+//    private Long teacherId;
     private LocalDateTime registeredAt;
 }

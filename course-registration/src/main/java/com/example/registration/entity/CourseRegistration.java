@@ -35,13 +35,15 @@ import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 @Entity
 public class CourseRegistration {
 
@@ -52,16 +54,16 @@ public class CourseRegistration {
     @Column(name = "course_id")
     private Long courseId;
 
-    @Column(name = "teacher_id")//?
-    private Long teacherId;//?
+//    @Column(name = "teacher_id")//?
+//    private Long teacherId;//?
 
     @OneToOne
     @JoinColumn(name = "student_id")
     private Student student;
 
-//    @ManyToOne
-//    @JoinColumn(name = "teacher_id")
-//    private Teacher teacher;
+    @ManyToOne
+    @JoinColumn(name = "teacher_id")
+    private Teacher teacher;
 
 
     @Column(name = "registered_at")

@@ -1,19 +1,15 @@
-#server:
-#  port: 8082
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/postgres
-#
-#    username: postgres
-#    password: ваш_пароль
 server:
   port: 8082
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/course
+    url: jdbc:postgresql://localhost:6541/course
     username: course
     password: course
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+    properties:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+

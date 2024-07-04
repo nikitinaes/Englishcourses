@@ -13,6 +13,6 @@ public class CourseApplication {
 		SpringApplication.run(CourseApplication.class, args);
 	}
 
-	// Теперь можно работать с базой данных
+
 }
 
