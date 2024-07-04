@@ -1,0 +1,23 @@
+
+  version: '3.1'
+  services:
+    course-db:
+      image: postgres
+      container_name: course-db
+      ports:
+        - "6541:5432"
+      environment:
+        POSTGRES_DB: course
+        POSTGRES_USER: course
+        POSTGRES_PASSWORD: course
+
+    course-registration-db:
+      image: postgres
+      container_name: course-registration-db
+      ports:
+        - "6542:5432"
+      environment:
+        POSTGRES_DB: reg
+        POSTGRES_USER: reg
+        POSTGRES_PASSWORD: reg
+
